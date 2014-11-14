@@ -1,0 +1,10 @@
+<h2 id='allusers'>List of all users:</h2>
+
+<% @users.each do |u|%>
+  <div class='usercard'>
+    <h2><%= u.name %></h2>
+    <h3><%= u.email %></h3>
+  </div>
+<% end %>
+
+<p><a href="/">Back to index</a> | <a href="/sessions">Back to your sessions page</a></p>

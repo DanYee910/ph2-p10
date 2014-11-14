@@ -1,0 +1,39 @@
+<div id='target_container'>
+<img id='targetFace' src='/img/target_face_500.png' />
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<button type="button" id="clearAll">Reset board and scores, yes EVERYTHING!</button>
+</div>
+<br>
+<div id='instructions'>Instructions:
+  <ol>
+    <li>Click on the target.</li>
+    <li>Repeat step 1.</li>
+    <li>No backsies, enjoy your zeroes!</li>
+    <li>Repeat step 1 as long as you want.</li>
+    <li>Done shooting? Fill in the form and save your session.</li>
+  </ol>
+</div>
+<div id='session_panel'>
+  <p id="coordReadout">( X coordinates, Y coordinates ) :</p>
+  <div id='scoreFields'>
+    <p>Last Arrow: <span class="pointNumbers" id="shot_points">0</span></p>
+    <p>Current score: <span class="pointNumbers" id="current_score">0</span></p>
+    <p>Max score: <span class="pointNumbers" id="max_score">0</span></p>
+  </div>
+  <form id="make_session" method="post" action="/shooting">
+    <label class="label" for="name">Session Name:</label>
+    <input type="text" name="name" placeholder="Session name"><br>
+    <label class="label" for="target_size">Target(cm):</label>
+    <input type="text" name="target_size" placeholder="40">
+    <br>
+    <label class="label" for="distance">Distance(m):</label>
+    <input type="text" name="distance" placeholder="70"><br>
+    <label class="label" for="date">Date:</label>
+    <input type="date" name="date">
+    <input type="hidden" name="current_score" value="0">
+    <input type="hidden" name="max_score" value="0">
+    <div class="submit"><input type="submit" value="Save session"></div>
+  </form>
+  <img src='/img/targets.jpg' />
+  <p><a href="/">Back to index</a> | <a href="/sessions">Back to your sessions page</a></p>
+</div>
