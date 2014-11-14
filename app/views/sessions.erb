@@ -10,7 +10,7 @@
 <div id='score_container'>
 <% @sessions.each do |session|%>
   <h3 id='h3<%= session.id %>'><%= session.name %> on <%= session.date %> </h3>
-  <div class='card' id='sc<%= session.id %>'>Show stats</div><div class='deleteMe' id='<%= session.id %>'>Delete</div>
+  <div class='scorecard' id='sc<%= session.id %>'>Show stats</div><div class='deleteMe' id='<%= session.id %>'>Delete</div>
 <% end %>
 </div>
 

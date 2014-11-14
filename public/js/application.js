@@ -1,6 +1,6 @@
 $(document).ready(function() {
 //reads coordinates on the canvas
-$('#score_container').on('click', '.card', showScore);
+$('#score_container').on('click', '.scorecard', showScore);
 $('#score_container').on('click', '.deleteMe', deleteMe);
 $('#clearAll').on('click', clearEverything);
 
@@ -116,7 +116,7 @@ var showAjax = $.ajax({
     self.text('STATS:');
     self.css('height', '114px');
     self.css('width', '300px');
-    self.append('<div class="scorecard"><ul><li>Target: '+response.target_size+' cm</li><li>Distance: '+response.distance+' m</li><li>Score: '+response.total_score+' / '+response.max_score+'</li></ul></div>');
+    self.append('<div class="card"><ul><li>Target: '+response.target_size+' cm</li><li>Distance: '+response.distance+' m</li><li>Score: '+response.total_score+' / '+response.max_score+'</li></ul></div>');
   })
   .fail(function(event) {
     console.log('You FAILED!!!');

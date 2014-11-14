@@ -16,7 +16,7 @@ get '/sessions' do
 end
 
 post '/sessions' do
-  p params
+  id=params[:id].slice!(0,2)
   content_type :json
   @session = Session.find(params[:id])
   return @session.to_json
