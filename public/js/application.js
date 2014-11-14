@@ -1,6 +1,6 @@
 $(document).ready(function() {
 //reads coordinates on the canvas
-$('#score_container').on('click', '.scorecard', showScore);
+$('#score_container').on('click', '.card', showScore);
 $('#score_container').on('click', '.deleteMe', deleteMe);
 $('#clearAll').on('click', clearEverything);
 
